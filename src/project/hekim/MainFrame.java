@@ -51,7 +51,7 @@ public class MainFrame extends JFrame implements ActionListener, ItemListener {
 
         //메인메뉴---------------------------------------------------------------
         JPanel imgPanel = new JPanel();
-        BufferedImage mypic = ImageIO.read(new File("test.png"));
+        BufferedImage mypic = ImageIO.read(new File("titleimg.png"));
         JLabel pics = new JLabel(new ImageIcon(mypic));
         imgPanel.add(pics);
         frame.add(imgPanel);
