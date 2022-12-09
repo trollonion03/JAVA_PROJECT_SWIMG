@@ -269,7 +269,7 @@ public class BingoManager {
                     }
                 }
             }
-            //TODO 다고쳐 다고쳐 문제많아
+
             else if (N <= idx && idx < N * 2 ) { //행
                 L:
                 for (;;) {
@@ -297,7 +297,7 @@ public class BingoManager {
                     }
                 }
             }
-            //TODO 다 뜯어고쳐야함;
+
             else if (idx == N*2+1 ) { // 대각선 |/|
                 L:
                 for (;;) {

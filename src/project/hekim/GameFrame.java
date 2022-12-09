@@ -1,7 +1,5 @@
 package project.hekim;
 
-import com.sun.tools.javac.Main;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -22,7 +20,7 @@ public class GameFrame extends JFrame implements ActionListener {
     JTextField selTxt;
     RoundedButton enterBtn;
     RoundedButton[][] bingo;
-    RoundedButton viewComputer;
+    RoundedButton exitBtn;
     JLabel status;
     Color btnColor = new Color(151,222,206);
 
@@ -90,9 +88,10 @@ public class GameFrame extends JFrame implements ActionListener {
 
 
 
-        viewComputer = new RoundedButton("나가기");
-        viewComputer.setBackground(btnColor);
-        controlPanel.add(viewComputer);
+        exitBtn = new RoundedButton("나가기");
+        exitBtn.setBackground(btnColor);
+        exitBtn.addActionListener(this);
+        controlPanel.add(exitBtn);
 
         frame.add(controlPanel, BorderLayout.SOUTH);
         //------------------------------------------------------------------------
@@ -167,6 +166,14 @@ public class GameFrame extends JFrame implements ActionListener {
                 ex.printStackTrace();
             }
 
+        }
+        else if(e.getSource() == exitBtn) {
+            this.setVisible(false);
+            try {
+                new MainFrame("202211290 김형언");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
